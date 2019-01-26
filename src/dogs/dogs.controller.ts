@@ -9,11 +9,12 @@ import {
   Delete,
 } from '@nestjs/common';
 import { identity } from 'rxjs';
+import { CreateDogDto } from './create-dog.dto';
 
 @Controller('dogs')
 export class DogsController {
   @Post()
-  async create(@Body() createDogDto) {
+  async create(@Body() createDogDto: CreateDogDto) {
     return 'This action adds a new dog';
   }
 
