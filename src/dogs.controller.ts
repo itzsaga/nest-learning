@@ -1,9 +1,9 @@
-import { Controller, Get, Post, Param } from '@nestjs/common';
+import { Controller, Get, Post, Param, Body } from '@nestjs/common';
 
 @Controller('dogs')
 export class DogsController {
   @Post()
-  create() {
+  async create(@Body() createDogDto) {
     return 'This action adds a new dog';
   }
 
